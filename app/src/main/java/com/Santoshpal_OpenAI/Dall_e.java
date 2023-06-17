@@ -107,7 +107,7 @@ public class Dall_e extends AppCompatActivity {
 
             Request request = new Request.Builder()
                     .url("https://api.openai.com/v1/images/generations")
-                    .header("Authorization","Bearer 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")
+                    .header("Authorization","Bearer Your API KEY")
                     .post(requestBody)
                     .build();
 
