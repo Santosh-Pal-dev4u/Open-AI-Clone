@@ -1,4 +1,4 @@
-package com.santoshpalchatgpt;
+package com.Santoshpal_OpenAI;
 
 import android.content.Context;
 

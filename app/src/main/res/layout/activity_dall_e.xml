@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgrey"
+    tools:context=".Dall_e">
+
+
+    <TextView
+        android:id="@+id/Ai_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/outfit2"
+        android:text="DALL · E "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfit2"
+        android:text="A Image Generative AI"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+
+        android:textSize="14dp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ai_name" />
+
+
+    <EditText
+        android:id="@+id/editText_dall_e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColorHint="#89899b"
+        android:textColor="@color/black"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/chat_back"
+        android:elevation="10dp"
+        android:ellipsize="end"
+        android:hint="A photo of a white fur monster standing in a purple room"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:paddingStart="10dp"
+        android:minLines="0"
+        android:autofillHints="name"
+       android:minHeight="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/generate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/chat_back"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:text="Generate"
+        android:textColor="#818181"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/editText_dall_e"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="@+id/editText_dall_e"
+        app:layout_constraintTop_toBottomOf="@+id/editText_dall_e" />
+
+
+    <LinearLayout
+        android:id="@+id/image_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="80dp"
+
+        android:background="@drawable/chat_back"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_dall_e">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/generative_image1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="#818181"
+
+                />
+
+            <ImageView
+                android:id="@+id/generative_image2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="1dp"
+                android:background="#818181" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="1dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/generative_image3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="#818181"
+
+                />
+
+            <ImageView
+                android:id="@+id/generative_image4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="1dp"
+                android:background="#818181" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:background="#343541"
+       >
+
+            <TextView
+                android:id="@+id/download"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Tap Image to Download"
+
+                android:textColor="#818181"
+                android:textSize="16dp"
+
+
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:indeterminateTint="@color/grey"
+
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/image_collection"
+        app:layout_constraintStart_toStartOf="@+id/image_collection"
+        app:layout_constraintTop_toBottomOf="@+id/image_collection" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

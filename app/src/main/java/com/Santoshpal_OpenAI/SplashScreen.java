@@ -1,22 +1,18 @@
-package com.santoshpalchatgpt;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.Santoshpal_OpenAI;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.view.Window;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Window window = this.getWindow();
-        window.setStatusBarColor(this.getResources().getColor(R.color.white));
+        window.setStatusBarColor(this.getResources().getColor(R.color.grey));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 

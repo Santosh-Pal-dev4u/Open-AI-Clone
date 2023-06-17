@@ -1,4 +1,4 @@
-package com.santoshpalchatgpt;
+package com.Santoshpal_OpenAI;
 
 public class Message {
     public static String SENT_BY_ME = "me";

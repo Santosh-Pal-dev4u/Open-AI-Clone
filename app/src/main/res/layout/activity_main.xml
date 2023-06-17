@@ -1,97 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#EBECEE"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#181A1B"
+    >
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/head"
+        android:orientation="horizontal"
         android:layout_height="50dp"
-        android:alpha=".8"
-
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
-        android:background="@drawable/upperview" />
-
-
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/outfit2"
-        android:text="ChatGPT"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        android:textStyle="bold" />
-
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recycler_view"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/view"
-        android:layout_above="@id/bottom_layout"
-        />
-
-    <ImageView
-        android:id="@+id/background"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="250dp"
-        android:alpha=".2"
-        android:elevation="20dp"
-        android:src="@drawable/gpt"
-        app:tint="#CB000000" />
-
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:elevation="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_alignParentBottom="true"
-        android:padding="8dp"
-        android:id="@+id/bottom_layout">
-
-        <EditText
-            android:id="@+id/message_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_centerInParent="true"
-            android:layout_toLeftOf="@id/send_btn"
-            android:background="@drawable/rounded_corner"
-            android:fontFamily="@font/outfit2"
-            android:hint="Write here "
-            android:padding="15dp" />
+        android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_bias=".49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/send_btn"
-            android:layout_width="52dp"
-            android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/circulerlock"
-            android:padding="10dp"
-            android:src="@drawable/ic_baseline_send_24"
-            app:tint="@color/white" />
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_margin="10dp"
 
-
-    </RelativeLayout>
+            android:src="@drawable/gpt"
+            app:tint="@color/white"
+            />
 
 
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_height="wrap_content"
+
+
+            android:fontFamily="@font/outfit2"
+            android:text="Open AI"
+
+            android:textColor="@color/white"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Dall.e"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#1C1F20"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        app:layout_goneMarginTop="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="DALL · E "
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_bias="0.5"
+                android:layout_marginTop="15dp"
+                android:layout_margin="10dp"
+                android:text="Create realistic images and art from a description in natural language"
+                android:textColor="#ABA399"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintHorizontal_bias="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/baseline_arrow_forward_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ChatGPT"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#1C1F20"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Dall.e"
+        app:layout_goneMarginTop="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Chat GPT"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintHorizontal_bias="0.5"
+                android:layout_marginTop="15dp"
+                android:layout_margin="10dp"
+                android:text="Interact with our flagship language models in a conversational interface"
+                android:textColor="#ABA399"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_margin="10dp"
+                android:src="@drawable/baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
